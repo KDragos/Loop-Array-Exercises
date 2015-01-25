@@ -52,8 +52,8 @@ foreach ($colors as $key => $color) {
 	<div>
 		<?php echo $msg; ?>
 		<form action="">
+			<span>Choose a color.</span>
 			<select name="color_id">
-				<span>Choose a color.</span>
 				<?php echo $dropdowncolors; ?>
 			</select>
 			<button>Submit</button>

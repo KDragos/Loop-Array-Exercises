@@ -2,14 +2,12 @@
 
 $colors = ['red', 'green', 'blue', 'yellow', 'pink', 'orange', 'purple', 'black', 'lime', 'teal'];
 
-
 $colorslist = "";
 for($i = 0; $i < count($colors); $i++) {
 	if (strlen($colors[$i]) > 4) {
 	$colorslist .= "<li>Color " . ($i+1) . ": $colors[$i]</li>";
 	} 
 }
-
 
 $color_id = "";
 $msg = "";
@@ -18,11 +16,9 @@ if (isset($_GET["color_id"])){
 	$msg = "You've chosen {$colors[$color_id]}.";
 }
 
-
-
 $dropdowncolors = "";
 foreach ($colors as $key => $color) {
-	if (strlen($colors[$color]) > 4) {
+	if (strlen($colors[$key]) > 4) {
 		$dropdowncolors .= "<option value=\"$key\">$color</option>";
 	}
 }

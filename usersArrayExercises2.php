@@ -11,15 +11,6 @@ if (isset($_GET["user"])) {
 	$msg = "Welcome, {$users[$user]}.";
 }
 
-$mUsers = [];
-$mUsersList = "";
-foreach ($users as $id_number => $name) {
-	if (strpos($name, "m") === 0) {
-		array_push($mUsers, $name);
-		$mUsersList .= "<li>$name</li>";
-	}
-}
-
 $user_options = "";
 foreach ($users as $id_number => $name) {
 	$user_options .= "<option value=\"$id_number\">$name</option>";
@@ -37,12 +28,6 @@ foreach ($users as $id_number => $name) {
  	<title>Users Array Exercises</title>
  </head>
  <body>
- 	<div>
- 		Users' names that start with "M".
- 	<ul>
- 		<?php echo $mUsersList ?>
- 	</ul>
- 	</div>
  	<div> 
 		<?php echo $msg; ?>
  	</div>
